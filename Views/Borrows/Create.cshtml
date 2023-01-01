@@ -1,0 +1,113 @@
+﻿@model Project_.Models.Borrow
+
+@{
+    ViewBag.Title = "Create";
+}
+@*cart check out form*@
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <link rel="stylesheet" href="~/Styles/style.css">
+    <div class="image"><img src="~/Images/image-asset.jpeg" style="width: 100%;height:120%"></div>
+
+    @*Navigation Bar*@
+
+<nav>
+    <a class="Maktabty" href="~/Books/books_after_login">Maktabty</a><img src="~/Images/phone.png" style="width: 15px; height:15px;position: absolute;left:290px;top: 21px;">
+    <a class="links" href="~/Users/ContactUs_after">Contact Us</a><img src="~/Images/info.png" style="width: 15px; height:15px;position: absolute;left:400px;top: 21px;">
+    <a class="links" href="~/Users/AboutUs_after" style="margin-right: 500px;">About Us</a>
+    <a class="links" href="~/Admins/Admin_SignUp">Sign out</a>
+
+
+</nav>
+
+    @*Here are some Text fields and labels for information that has to be filled to be stored in database.*@
+
+    <fieldset style="height: 90%;top: 100px;position: absolute;">
+        <legend style="font-size: x-large;">Check Out</legend>
+        <form action="/action_page.php">
+            <br><br>
+
+            <div class="form-horizontal">
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.NatID, "NatID", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownList("NatID", null, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.NatID, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <br><br>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.BookID, "BookID", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownList("BookID", null, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.BookID, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <br><br>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.TakenDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.TakenDate, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.TakenDate, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <br><br>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.BroughtDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.BroughtDate, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.BroughtDate, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <br><br>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Book_Quantity, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Book_Quantity, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Book_Quantity, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <br><br>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Create" class="submit" />
+                    </div>
+                </div>
+               @* @if (ViewBag.Message != null)
+                {
+                    <script type="text/javascript">
+                        window.onload = function () {
+                            alert("@ViewBag.Message");
+                        };
+
+                    </script>
+                }
+*@
+        </form>
+    </fieldset>
+    <br>
+    <br>
+}
+
+<a href="~/Books/books_after_login"><input style="width:200px;z-index:1; right:50px; top:700px" type="submit" value="Back to HomePage" class="submit" /></a>
+
+
+@*Last part is the footer which contains some useful information about our website.*@
+
+<div style="top: 120%;" class="lastpart">
+    <li>
+        <strong style=" font-size: xx-large; margin-top: 5%;">Maktabty</strong><br>
+        <a href=""><img class="socialmedia" style=" padding-left: 2%;" src="~/Images/instagram.png" alt="instagram"></a>
+        <a href=""> <img class="socialmedia" src="~/Images/facebook.png" alt="facebook"></a>
+        <a href=""> <img class="socialmedia" src="~/Images/twitter (1).png" alt="twitter"></a>
+        <a href=""> <img class="socialmedia" src="~/Images/youtube.png" alt="youtube"></a>
+    </li>
+    <a href="~/Users/AboutUs_after"><li style="margin-left: 40%;color: #000;"> About Us</li></a>
+    <a href="~/Users/ContactUs_after"><li style="margin-left: 40%; margin-top: 90px; color: #000;"> Contact Us</li></a>
+
+</div>
+
