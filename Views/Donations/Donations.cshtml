@@ -1,0 +1,100 @@
+﻿@model Project_.Models.Donation
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+@*This Webpage is for collecting donations by providing some donation ID to the user to come and physically pay.*@
+
+<link rel="stylesheet" href="~/Styles/style.css">
+<body>
+    <div class="image"><img src="~/Images/image-asset.jpeg" style="width: 100%;height:900px"></div>
+
+    @*Navigation Bar*@
+
+
+    <nav>
+        <a class="Maktabty" href="~/Books/books_after_login">Maktabty</a><img src="~/Images/phone.png" style="width: 15px; height:15px;position: absolute;left:290px;top: 21px;">
+        <a class="links" href="~/Users/ContactUs_after">Contact Us</a><img src="~/Images/info.png" style="width: 15px; height:15px;position: absolute;left:400px;top: 21px;">
+        <a class="links" href="~/Users/AboutUs_after" style="margin-right: 500px;">About Us</a>
+        @*<a class="link" href="~/Borrows/AddToCart"><img class="link" style="margin-left: 70px;" src="~/Images/cart.png" alt="cart"></a>*@
+
+    </nav>
+
+    <h1 style="margin-left: 35% ; color: white;">Help Us Inspire More Minds</h1>
+    <hr style="margin-left: 31% ; position: absolute;top:25% ;width: 500px; color: white;">
+    <h1 style="margin-left: 32% ; color: white;position: absolute;top:27% ;"> Your donation turns the next page!</h1>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <fieldset style="height: 75%;top: 300px;position: absolute; background-image: linear-gradient(to bottom, rgb(214, 204, 186), rgb(253, 194, 116)); color: #000;">
+                <br><br><br><br>
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Amount, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Amount, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Amount, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <br><br>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Date, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <br><br>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.NatID, "NatID", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.NatID, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.NatID, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <br><br>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Create" class="submit" id="Finish" />
+                    </div>
+                </div>
+
+            </fieldset>
+        </div>
+        if(ViewBag.Message != null)
+                {
+                    <script type="text/javascript">
+                        window.onload = function () {
+                            alert("@ViewBag.Message");
+                        };
+
+                    </script>
+                }
+    }
+    <div class="lastpart" style="position: absolute;top: 140% ;">
+        <li>
+            <strong style=" font-size: xx-large; margin-top: 5%;">Maktabty</strong><br>
+            <a href=""><img class="socialmedia" style=" padding-left: 2%;" src="~/Images/instagram.png" alt="instagram"></a>
+            <a href=""><img class="socialmedia" src="~/Images/facebook.png" alt="facebook"></a>
+            <a href=""> <img class="socialmedia" src="~/Images/twitter (1).png" alt="twitter"></a>
+            <a href=""> <img class="socialmedia" src="~/Images/youtube.png" alt="youtube"></a>
+        </li>
+        <a href="~/Users/AboutUs_after"><li style="margin-left: 40%;color: #000;"> About Us</li></a>
+        <a href="~/Users/ContactUs_after"><li style="margin-left: 40%; margin-top: 90px; color: #000;"> Contact Us</li></a>
+
+    </div>
+
+</body>
+</html>
+
