@@ -1,0 +1,100 @@
+﻿@model Project_.Models.Admin
+
+@{
+    ViewBag.Title = "Admin_Signup";
+}
+
+@*Admin Sign Up*@
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <link rel="stylesheet" href="~/Styles/style.css">
+    <div class="image"><img src="~/Images/image-asset.jpeg" style="width: 100%;height:120%"></div>
+
+
+
+    @*Navigation Bar That Contains Filters and *@
+    @*------------------------------------------------*@
+
+
+    <nav>
+        <a class="Maktabty" href="~/Books/books_before_login">Maktabty</a><img src="~/Images/phone.png" style="width: 15px; height:15px;position: absolute;left:290px;top: 21px;">
+        <a class="links" href="~/Users/ContactUs_before">Contact Us</a><img src="~/Images/info.png" style="width: 15px; height:15px;position: absolute;left:400px;top: 21px;">
+        <a class="links" href="~/Users/AboutUs_before" style="margin-right: 500px;">About Us</a>
+        <a class="links" style="margin-right: 500px;" href="Edit">
+            Login
+        </a>
+    </nav>
+
+    @*FieldSet Which is responsible for making margin to the form*@
+    @*-----------------------------------------------------------*@
+
+    <fieldset style="height: 60%;top: 100px;position: absolute;">
+        <legend style="font-size: x-large;">Sign Up</legend>
+        <form action="">
+            <br><br>
+
+            @*Label and text field for Admin Name*@
+
+
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Admin_Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Admin_Name, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Admin_Name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                @*Label and text field for National ID*@
+
+
+                <br><br>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.NationalID, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.NationalID, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.NationalID, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <br><br>
+
+                @*Label and text field for Password*@
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <br><br>
+
+                @*Button for Signing up*@
+
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Create" id="Finish" class="submit" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </fieldset>
+    <div class="lastpart" style="position:relative;top:20px">
+        <li>
+            <strong style=" font-size: xx-large; margin-top: 5%;">Maktabty</strong><br>
+            <a href=""><img class="socialmedia" style=" padding-left: 2%;" src="~/Images/instagram.png" alt="instagram"></a>
+            <a href=""> <img class="socialmedia" src="~/Images/facebook.png" alt="facebook"></a>
+            <a href=""> <img class="socialmedia" src="~/Images/twitter (1).png" alt="twitter"></a>
+            <a href=""> <img class="socialmedia" src="~/Images/youtube.png" alt="youtube"></a>
+        </li>
+        <a href="~/Users/AboutUs_before"><li style="margin-left: 40%;color: #000;"> About Us</li></a>
+        <a href="~/Users/ContactUs_before"><li style="margin-left: 40%; margin-top: 90px; color: #000;"> Contact Us</li></a>
+
+    </div>
+
+}
