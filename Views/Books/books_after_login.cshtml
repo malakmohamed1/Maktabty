@@ -1,0 +1,91 @@
+﻿@model IEnumerable<Project_.Models.Book>
+
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+
+@*This Webpage is after the clients Login or Guests that signup.*@
+@*--------------------------------------------------------------*@
+
+<link rel="stylesheet" href="~/Styles/style.css">
+<body>
+    
+
+    @*Here the Clients can browse as they need throughout our website.*@
+
+
+    <div class="image">
+        <img src="~/Images/image-asset.jpeg" style="width: 110%;height:400px; position:absolute; left: -30px; z-index: 1;">
+    </div>
+    <a href="ViewCollection_1"><button class="vc"> VIEW COLLECTION</button></a><br>
+    
+    @*Navigation Bar*@
+
+    <nav>
+        <a class="Maktabty" href="books_after_login">Maktabty</a><img src="~/Images/phone.png" style="width: 15px; height:15px;position: absolute;left:290px;top: 21px;">
+        <a class="links" href="~/Users/ContactUs_after">Contact Us</a><img src="~/Images/info.png" style="width: 15px; height:15px;position: absolute;left:400px;top: 21px;">
+        <a class="links" href="~/Users/AboutUs" style="margin-right: 400px;">About Us</a>
+      @*  <a class="link" href="~/Users/AddToCart"><img class="link" style="margin-left: 150px;" src="~/Images/cart.png" alt="cart"></a>*@
+        <a class="links" href="~/Donations/Donations" style="margin-left: 150px;">Donate</a>
+        <a class="links" href="~/Users/Edit" style="margin-left:150px">Sign out</a>
+
+
+
+    </nav>
+
+
+    @*Here The collection will be the same as Latest books because the Library is just opening*@
+    @*----------------------------------------------------------------------------------------*@
+
+    <p style="text-align: center; font-size: xx-large; position: absolute; top: 70% ; right: 40%; left: 40%;"> <strong>LATEST BOOKS</strong></p>
+    <div class="container">
+        <div class="scrollmenu">
+            <div class='img-container'>
+                @foreach (var item in Model)
+                {
+                    <table style="display:inline">
+                        <tr>
+
+                            <th>
+                                <img class="mystery" style="padding-right: 100px; display: inline-block;  position: relative; top: 95%; width: 250px; height: 350px; " src="@Url.Content(item.Image)" alt="img error">
+
+                            </th>
+                        </tr>
+                        <tr>
+                            <td style=" font-size:x-large ">
+                                <strong>@Html.DisplayFor(modelItem => item.Book_Name)</strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: large">
+                                @Html.DisplayFor(modelItem => item.Genre)
+                            </td>
+                        </tr>
+                    </table>
+                }
+
+            </div>
+
+
+            @*Footer that contain some useful links*@
+
+            <div class="lastpart" style="position: absolute ; top:500px">
+                <li>
+                    <strong style=" font-size: xx-large; margin-top: 5%;">Maktabty</strong><br>
+                    <a href=""><img class="socialmedia" style=" padding-left: 2%;" src="~/Images/instagram.png" alt="instagram"></a>
+                    <a href=""> <img class="socialmedia" src="~/Images/facebook.png" alt="facebook"></a>
+                    <a href=""> <img class="socialmedia" src="~/Images/twitter (1).png" alt="twitter"></a>
+                    <a href=""> <img class="socialmedia" src="~/Images/youtube.png" alt="youtube"></a>
+                </li>
+                <a href="~/Users/AboutUs_after"><li style="margin-left: 40%;color: #000;"> About Us</li></a>
+                <a href="~/Users/ContactUs_after"><li style="margin-left: 40%; margin-top: 90px; color: #000;"> Contact Us</li></a>
+
+            </div>
+        </div>
+
+</body>
+</html>
+

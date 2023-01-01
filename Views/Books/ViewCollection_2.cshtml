@@ -1,0 +1,92 @@
+﻿@model IEnumerable<Project_.Models.Book>
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+@*This Webpage is responsible for Showing what are the collections of books availale for Admin.*@
+@*---------------------------------------------------------------------------------------------*@
+
+<link rel="stylesheet" href="~/Styles/style.css">
+<body>
+
+    @*Navigation Bar, but different from client*@
+
+    <nav>
+        <a class="Maktabty" href="books_after_login">Maktabty</a><img src="~/Images/phone.png" style="width: 15px; height:15px;position: absolute;left:290px;top: 21px;">
+        <a class="links" href="~/Users/ContactUs_after">Contact Us</a><img src="~/Images/info.png" style="width: 15px; height:15px;position: absolute;left:400px;top: 21px;">
+        <a class="links" href="~/Users/AboutUs_after" style="margin-right: 500px;">About Us</a>
+        <a class="links" href="~/Donations/Index" style="margin-right: 500px;">View Donations</a>
+        <a class="links" href="~/Users/Edit" style="position:absolute; left:1200px">Sign out</a>
+
+
+
+
+
+    </nav>
+    
+
+    @*This is the collection we have in the library which are displayed from View Collection button.*@
+    @*----------------------------------------------------------------------------------------------*@
+
+
+    <table style="width:100%; padding-left: 30% ;  margin-top: 10%;">
+        <tr>
+            <td>
+                <div class="scrollmenu1">
+                    <div class='img-container1'>
+                        @{
+                            int count = 0;
+
+                            foreach (var item in Model)
+                            {
+                                count++;
+                                <table style="display:inline">
+                                    <tr>
+                                        <th>
+                                            <img class="mystery" style="padding-right: 100px; display: inline-block; overflow:scroll  ;position: relative; top: 95%; width: 250px; height: 350px; " src="@Url.Content(item.Image)" alt="img error">
+
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td style=" font-size:x-large ">
+                                            <strong>@Html.DisplayFor(modelItem => item.Book_Name)</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-size: large">
+                                            @Html.DisplayFor(modelItem => item.Genre)
+
+                                            <br><br>
+                                        </td>
+                                    </tr>
+                                </table>
+                            }
+                        }
+
+                       
+                    </div>
+            </td>
+        </tr>
+
+
+    </table>
+
+    <div class="lastpart" style="position:relative;bottom:0">
+        <li>
+            <strong style=" font-size: xx-large; margin-top: 5%;">Maktabty</strong><br>
+            <a href=""><img class="socialmedia" style=" padding-left: 2%;" src="~/Images/instagram.png" alt="instagram"></a>
+            <a href=""> <img class="socialmedia" src="~/Images/facebook.png" alt="facebook"></a>
+            <a href=""> <img class="socialmedia" src="~/Images/twitter (1).png" alt="twitter"></a>
+            <a href=""> <img class="socialmedia" src="~/Images/youtube.png" alt="youtube"></a>
+        </li>
+        <a href="~/Users/AboutUs_after"><li style="margin-left: 40%;color: #000;"> About Us</li></a>
+        <a href="~/Users/ContactUs_after"><li style="margin-left: 40%; margin-top: 90px; color: #000;"> Contact Us</li></a>
+
+    </div>
+
+   
+
+</body>
+</html>

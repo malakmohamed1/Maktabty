@@ -1,0 +1,112 @@
+﻿@model IEnumerable<Project_.Models.Book>
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+@*This Webpage is responsible for Showing what are the collections of books availale for Clients.*@
+
+<link rel="stylesheet" href="~/Styles/style.css">
+<body>
+
+    @*Navigation Bar*@
+
+    <nav>
+        <a class="Maktabty" href="books_after_login">Maktabty</a><img src="~/Images/phone.png" style="width: 15px; height:15px;position: absolute;left:290px;top: 21px;">
+        <a class="links" href="~/Users/ContactUs_after">Contact Us</a><img src="~/Images/info.png" style="width: 15px; height:15px;position: absolute;left:400px;top: 21px;">
+        <a class="links" href="~/Users/AboutUs_after" style="margin-right: 500px;">About Us</a>
+      
+
+    </nav>
+
+    @*We here implement filters in order to guide client to his own preference.*@
+
+
+   
+            
+
+    <div class="main">
+
+    </div>
+
+    
+
+    @*Here we Began to make sure that each button is refered to some picture.*@
+
+    
+    <table style="width:100%; padding-left: 30% ;  margin-top: 10%;">
+        <tr>
+            <td>
+                    <div class="scrollmenu1">
+                        <div class='img-container1'>
+                            @{ 
+                                int count = 0;       @*This means that everytime this functuion is called 
+                                                         It is initialzed and it checks that the button
+                                                         That corresponds to a certain is what was pressed*@
+
+                            foreach (var item in Model)
+                            {
+                                count++;
+                                    <table style="display:inline">
+                                        <tr>
+                                            <th>
+                                                <img class="mystery" style="padding-right: 100px; display: inline-block; overflow:scroll  ;position: relative; top:95%; width: 250px; height: 350px; " src="@Url.Content(item.Image)" alt="img error">
+
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td style=" font-size:x-large ">
+                                                <strong>@Html.DisplayFor(modelItem => item.Book_Name)</strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size: large">
+
+
+                                                @*This function sends the id of the button pressed to the database.*@
+
+
+                                                @Html.DisplayFor(modelItem => item.Genre)
+                                                @using (Html.BeginForm("AddToCart", "Borrows", new { id = count }, FormMethod.Post))
+                                                {
+                                                    <button class="button1" type="submit">Add To Cart</button>
+                                                }
+                                                <br><br>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                }
+                            }
+
+
+
+
+
+
+                           
+
+                        </div>
+            </td>
+        </tr>
+
+
+    </table>
+
+    <div class="lastpart" style="position:relative;bottom:0">
+        <li>
+            <strong style=" font-size: xx-large; margin-top: 5%;">Maktabty</strong><br>
+            <a href=""><img class="socialmedia" style=" padding-left: 2%;" src="~/Images/instagram.png" alt="instagram"></a>
+            <a href=""> <img class="socialmedia" src="~/Images/facebook.png" alt="facebook"></a>
+            <a href=""> <img class="socialmedia" src="~/Images/twitter (1).png" alt="twitter"></a>
+            <a href=""> <img class="socialmedia" src="~/Images/youtube.png" alt="youtube"></a>
+        </li>
+        <a href="~/Users/AboutUs_after"><li style="margin-left: 40%;color: #000;"> About Us</li></a>
+        <a href="~/Users/ContactUs_after"><li style="margin-left: 40%; margin-top: 90px; color: #000;"> Contact Us</li></a>
+
+    </div>
+
+  
+
+
+</body>
+</html>
