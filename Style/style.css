@@ -1,0 +1,646 @@
+﻿body {
+    overflow-x: hidden;
+}
+
+.ui-helper-hidden {
+    display: none;
+}
+
+
+.DonTr{
+    font-size: xx-large;
+    
+}
+
+.ui-helper-hidden-accessible {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+nav {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    word-spacing: 30px;
+    background-color: #ffffff;
+    color: #D6D6D6;
+    height: 80px;
+}
+
+.links {
+    margin-left: 10px;
+    color: black;
+    word-spacing: 0px;
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 80px;
+    text-decoration: none;
+    position: relative;
+    left: 300px;
+    top: 20px;
+    text-decoration: none !important;
+}
+
+.linkss {
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 13.6%;
+    top: 20px;
+}
+
+.link {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    left: 67%;
+    top: 10px;
+    opacity: 0.9;
+    transition: opacity 0.5s;
+    display: inline;
+    padding-left: 10%;
+}
+
+    .link :hover {
+        cursor: pointer;
+        opacity: 1;
+        transition: opacity 0.5s;
+        filter: drop-shadow(0 0 0.1rem rgb(0, 0, 0));
+    }
+
+a:hover {
+    text-shadow: 0 0 5px #050505;
+    transition: .8s ease;
+    cursor: pointer;
+}
+
+.Maktabty {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    color: rgb(252, 184, 95);
+    word-spacing: 0px;
+    font-size: xx-large;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 80px;
+    text-decoration: none !important;
+}
+
+label {
+    padding-top: 200px;
+    font-size: large;
+}
+
+fieldset {
+    right: 30%;
+    text-align: center;
+    color: white;
+    width: 40%;
+}
+/* div fieldset{
+    
+  margin-left: 60%; 
+  top:30%; 
+  position:absolute;
+  background-color: white;
+} */
+input {
+    border-radius: 5px;
+}
+
+h1 {
+    position: absolute;
+    top: 100px;
+}
+
+nav a .navigation {
+    color: black;
+    position: absolute;
+    left: 300px;
+}
+
+.submit {
+    background-color: rgb(155, 155, 21);
+    border-radius: 25px;
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    right: 38%;
+    color: white;
+}
+
+    .submit:hover {
+        text-shadow: 0 0 5px #050505;
+        transition: .8s ease;
+        cursor: pointer;
+        box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+    }
+
+footer {
+    position: relative;
+    margin-bottom: 0px;
+    bottom: 0px;
+    background-color: rgb(155, 155, 21);
+    width: 100%;
+    height: 100px;
+}
+
+.image {
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+input {
+    width: 300px;
+}
+
+.vc:hover {
+    background-image: linear-gradient(to right, rgb(224, 172, 75),rgb(214, 178, 112));
+    transition: .3s ease;
+    text-shadow: 0 0 5px #050505;
+}
+
+.vc {
+    background-color: transparent;
+    position: absolute;
+    top: 220px;
+    right: 60%;
+    width: 350px;
+    height: 70px;
+    font-size: x-large;
+    color: rgb(252, 184, 95);
+    border-color: white;
+    border-radius: 15px;
+    -webkit-text-stroke: 0.7px #302e2e;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+    /* Dropdown button */
+    .dropdown .dropbtn {
+        font-size: medium;
+        border: none;
+        outline: none;
+        color: rgb(0, 0, 0);
+        padding-top: 20px;
+        padding-bottom: 80px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+        position: absolute;
+        top: 1px;
+        left: 200px;
+        padding-right: 6%;
+    }
+
+        .dropdown .dropbtn:hover {
+            text-shadow: 0 0 5px #050505;
+            transition: .8s ease;
+            cursor: pointer;
+        }
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    position: absolute;
+    top: 80px;
+    width: 105%;
+}
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 160px;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        margin-right: 30px;
+    }
+
+        /* Add a grey background color to dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.container {
+    position: absolute;
+    top: 95%;
+    width: 100%;
+    height: 10px;
+}
+
+div .scrollmenu {
+    background-color: rgb(255, 255, 255);
+    overflow: auto;
+    white-space: nowrap;
+}
+div .scrollmenu1 {
+    background-color: rgb(255, 255, 255);
+   overflow-y:auto;
+    white-space: nowrap;
+}
+
+    div .scrollmenu::-webkit-scrollbar {
+        display: none;
+    }
+
+/*div .scrollmenu1::-webkit-scrollbar {
+    display: none;
+}*/
+
+
+div.mystery {
+    padding-right: 7%;
+    height: "350px";
+    width: "250px";
+}
+
+.img-container {
+    display: inline-block;
+    padding-right: 7%;
+    position: relative;
+}
+
+.button3 {
+    display: none;
+}
+
+.img-container .button3 {
+    position: absolute;
+    top: 70%;
+    left: 37%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(252, 184, 95);
+    /* -ms-transform: translate(-50%, -50%); */
+    /* background-color: #555; */
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+img:hover + .button3 {
+    display: inline-block;
+    background-color: rgb(252, 184, 95);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+.button3:hover {
+    display: block;
+    border-radius: 5px;
+    text-shadow: 0 0 5px #050505;
+    transition: .8s ease;
+    cursor: pointer;
+}
+
+/*.button1 {
+    background-color: rgb(252, 184, 95);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin-left: 6%;
+    border-radius: 10px;
+}
+
+.button1:hover {
+        text-shadow: 0 0 5px #050505;
+        transition: .8s ease;
+        cursor: pointer;
+
+}*/
+#atc {
+    background-color: rgb(252, 184, 95);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin-left: 6%;
+    border-radius: 10px;
+}
+/* .img-container .button2{
+
+  position: absolute;
+  top: 70%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+  background-color:  rgb(252, 184, 95);
+  
+  
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.mystery:hover + .button2 {
+
+display: inline-block;
+background-color:  rgb(252, 184, 95);
+color: rgb(0, 0, 0);
+text-decoration: none;
+padding: 8px 16px;
+
+
+} */
+
+
+div.lastpart {
+    height: 180px;
+    background-color: rgb(255, 210, 128);
+    width: 100%;
+    position: absolute;
+    top: 190%;
+    color: #050505;
+}
+
+li {
+    position: absolute;
+    margin-left: 20%;
+    display: inline;
+    font-size: x-large;
+    margin-top: 3%;
+    border: 10px;
+}
+
+.socialmedia {
+    height: 4%;
+    width: 4%;
+    transition: opacity 0.5s;
+    background-color: transparent;
+    border-color: white;
+    -webkit-text-stroke: 0.7px #302e2e;
+    opacity: 0.9;
+    transition: opacity 0.5s;
+    display: inline;
+}
+
+    .socialmedia:hover {
+        cursor: pointer;
+        opacity: 1;
+        transition: opacity 0.5s;
+        filter: drop-shadow(0 0 0.1rem rgb(0, 0, 0));
+    }
+
+/* Fixed sidenav, full height */
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 0;
+    top: 30%;
+    left: 3%;
+    background-color: rgb(252, 228, 161);
+    overflow-x: hidden;
+    padding-top: 20px;
+    position: absolute;
+    height: 50%;
+    background-image: linear-gradient(to bottom, rgb(252, 229, 186),rgb(216, 209, 202));
+    border-radius: 10px;
+}
+
+    .sidenav::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Style the sidenav links and the dropdown button */
+    .sidenav a, .dropdown-btn {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #555454;
+        display: block;
+        border: none;
+        background: none;
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
+        outline: none;
+    }
+
+        /* On mouse-over */
+        .sidenav a:hover, .dropdown-btn:hover {
+            color: #f1f1f1;
+        }
+
+/* Main content */
+.main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    font-size: 20px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+    background-color: rgb(252, 229, 186);
+    color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+    display: none;
+    background-color: rgb(247, 239, 218);
+    padding-left: 8px;
+    font-size: large;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+    float: right;
+    padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+        .sidenav a {
+            font-size: 18px;
+        }
+}
+
+.Btn {
+    background-color: rgb(252, 228, 161);
+    margin-top: 10%;
+    padding-left: 8px;
+    border-color: #D6D6D6;
+    margin-left: 19%;
+    border-radius: 25px;
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    right: 29%;
+    color: #818181;
+    font-size: large;
+    background-image: linear-gradient(to right, rgb(252, 229, 186),rgb(235, 221, 195));
+}
+
+    .Btn:hover {
+        color: #f1f1f1;
+        text-shadow: 0 0 5px #050505;
+        transition: .8s ease;
+        cursor: pointer;
+        box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+    }
+
+.img-container1 {
+    margin-bottom: 3%;
+    margin-bottom: 20%;
+    position: relative;
+}
+
+.previous {
+    background-color: rgb(252, 184, 95);
+    color: black;
+    margin-left: 50%;
+    margin-right: 5%;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+    .previous:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+.next {
+    background-color: rgb(252, 184, 95);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+    .next:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+.button2 {
+    display: none;
+}
+
+    .button2:hover {
+        display: block;
+        border-radius: 5px;
+        text-shadow: 0 0 5px #050505;
+        transition: .8s ease;
+        cursor: pointer;
+    }
+
+.mystery:hover {
+    -webkit-filter: brightness(70%);
+    /* -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease; */
+}
+
+.img-container1 .button2 {
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(252, 184, 95);
+    /* -ms-transform: translate(-50%, -50%); */
+    /* background-color: #555; */
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+img:hover + .button2 {
+    display: inline-block;
+    background-color: rgb(252, 184, 95);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 999999; /* Sit on top */
+    padding-top: 30px; /* Location of the box */
+    left: 400px;
+    top: 50px;
+    width: 600px; /* Full width */
+    height: 500px; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    border-radius: 50px;
+}
+
+    .modal::-webkit-scrollbar {
+        display: none;
+    }
+
+/* Modal Content */
+.modal-content {
+    background-color: #ffffff;
+    margin: auto;
+    padding: 20px;
+    width: 500px;
+    height: 420px;
+    border-radius: 30px;
+    overflow: auto;
+}
+
+    .modal-content::-webkit-scrollbar {
+        display: none;
+    }
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    height: 70%;
+    z-index: 1;
+}
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+        z-index: 1;
+    }
